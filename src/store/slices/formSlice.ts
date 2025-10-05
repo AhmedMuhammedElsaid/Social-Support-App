@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ApplicationForm, FormStep } from '../../types/formTypes';
 import { FORM_LOCAL_STORAGE_KEY, initialFormData } from '../../utils/Constants';
-import { getLocalStorageItem, removeLocalStorageItem, setLocalStorageItem } from '../../utils/helpers';
+import { removeLocalStorageItem, setLocalStorageItem } from '../../utils/helpers';
 
 export interface FormState {
     currentStep: FormStep;
@@ -45,13 +45,8 @@ const formSlice = createSlice({
             state.submissionError = action.payload;
         },
         updateFormWithCachedValues: (state, action: PayloadAction<ApplicationForm>) => {
-            console.log('Updating form with cached values:', action.payload);
             state.formData = { ...state.formData, ...action.payload };
         },
-        // loadFormFromStorage: (state) => {
-        //     const savedForm = getLocalStorageItem(FORM_LOCAL_STORAGE_KEY);
-        //     if (savedForm) state.formData = { ...state.formData, ...savedForm };
-        // },
         resetForm: (state) => {
             state.formData = initialState.formData;
             state.currentStep = 1;
