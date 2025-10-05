@@ -35,40 +35,6 @@ Welcome to the **Government Social Support Portal** - a sophisticated, productio
 -   **Error Handling**: Comprehensive error boundaries and user-friendly messages
     
 
-## 📁 Project Structure
-
-text
-
-src/
-├── components/
-│   ├── UI/                    
-│   │   ├── Button.tsx
-│   │   ├── Input.tsx
-│   │   ├── Modal.tsx
-│   │   └── ProgressBar.tsx
-│   └── form/                 
-│       ├── Step1PersonalInfo.tsx
-│       ├── Step2FamilyInfo.tsx
-│       ├── Step3SituationDescription.tsx
-│       └── TextAreaWithAI.tsx
-├── store/                   
-│   ├── store.ts
-│   └── slices/
-│       └── formSlice.ts
-├── services/                
-│   ├── api.ts
-│   └── openaiService.ts
-├── utils/                    
-│   └── validation.ts
-├── hooks/                     
-│   └── useAIAssistant.ts
-├── i18n/                     
-│   ├── en.json
-│   ├── ar.json
-│   └── i18n.ts
-└── tests/                   
-    └── components/
-
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
