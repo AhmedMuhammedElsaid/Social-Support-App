@@ -66,7 +66,6 @@ export const useAIAssistant = ({ formData, fieldConfigs }: UseAIAssistantProps) 
                 isLoading: false,
                 error: null
             }));
-            console.log({ suggestion })
         } catch (error) {
             let errorMessage = t('form.aiAssist.error');
             if (error instanceof Error) {
