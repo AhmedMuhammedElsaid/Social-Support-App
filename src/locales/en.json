@@ -1,0 +1,99 @@
+{
+  "application":"Application Details",
+  "app": {
+    "title": "Social Support Application",
+    "description": "Apply for social support by filling out the form below. Use AI assistance to help with writing your situation descriptions."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success"
+  },
+  "form": {
+    "personalInfo": "Personal Information",
+    "familyFinancial": "Family & Financial",
+    "situationDescription": "Situation Description",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit Application",
+    "name": "Full Name",
+    "nationalId": "National ID",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "genderOptions": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "namePlaceholder": "Enter your full name",
+    "nationallityPlaceholder":"Enter your national ID...",
+    "dateOfBirthPlaceholder":"YYYY-MM-DD",
+    "addressPlaceholder":"Enter your address...",
+    "cityPlaceholder":"Enter your city...",
+    "statePlaceholder":"Enter your state/province...",
+    "countryPlaceholder":"Enter your country...",
+    "phonePlaceholder":"Enter your phone number...",
+    "emailPlaceholder":"Enter your email address...",
+    "address": "Address",
+    "city": "City",
+    "state": "State/Province",
+    "country": "Country",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "maritalStatus": "Marital Status",
+    "maritalStatusOptions": {
+      "single": "Single",
+      "married": "Married",
+      "divorced": "Divorced",
+      "widowed": "Widowed"
+    },
+    "dependents": "Number of Dependents",
+    "employmentStatus": "Employment Status",
+    "employmentStatusOptions": {
+      "employed": "Employed",
+      "unemployed": "Unemployed",
+      "student": "Student",
+      "retired": "Retired"
+    },
+    "monthlyIncome": "Monthly Income (USD)",
+    "housingStatus": "Housing Status",
+    "housingStatusOptions": {
+      "owned": "Owned",
+      "rented": "Rented",
+      "with_family": "Living with Family",
+      "other": "Other"
+    },
+    "financialSituation": "Current Financial Situation",
+    "financialSituationPlaceholder": "Describe your current financial situation, including income, expenses, debts, and any financial challenges you're facing...",
+    "employmentCircumstances": "Employment Circumstances",
+    "employmentCircumstancesPlaceholder": "Describe your employment situation, job search challenges, or difficulties in maintaining employment...",
+    "reasonForApplying": "Reason for Applying",
+    "reasonForApplyingPlaceholder": "Explain why you need social support and how it would help improve your situation...",
+    "aiAssist": {
+      "helpMeWrite": "Help Me Write",
+      "generating": "Generating suggestion...",
+      "suggestion": "AI Writing Suggestion",
+      "accept": "Accept Suggestion",
+      "discard": "Discard",
+      "error": "Unable to generate suggestion at this time. Please try again later.",
+           "available": "AI Writing Assistance Available",
+      "description": "Click 'Help Me Write' on any field to get AI-powered suggestions for improving your description.",
+      "currentText": "Your current text:",
+      "aiSuggestion": "AI Suggestion:",
+      "tip": "Tip",
+      "tipDescription": "The AI suggestion is a starting point. Feel free to edit it to best reflect your personal situation.",
+      "tryAgain": "Try again",
+      "edit": "Edit First",
+      "prompts": {
+        "financialSituation": "Help me write about my current financial situation",
+        "employmentCircumstances": "Help me describe my employment circumstances",
+        "reasonForApplying": "Help me explain why I need financial assistance"
+      },
+      "contexts": {
+        "financialSituation": "User needs to describe financial circumstances for government support application",
+        "employmentCircumstances": "User needs to describe employment situation for government support application",
+        "reasonForApplying": "User needs to explain why they need financial assistance"
+      }
+    }
+    }
+    
+  }

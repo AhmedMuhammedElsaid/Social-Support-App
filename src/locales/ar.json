@@ -1,0 +1,98 @@
+{
+  "application":"تفاصيل الطلب",
+  "app": {
+    "title": "طلب الدعم الاجتماعي",
+    "description": "قدّم طلبًا للحصول على الدعم الاجتماعي عن طريق ملء النموذج أدناه. استخدم مساعدة الذكاء الاصطناعي للمساعدة في كتابة أوصاف وضعك."
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح"
+  },
+  "form": {
+    "namePlaceholder": "أدخل اسمك الكامل",
+    "nationallityPlaceholder":"أدخل رقم هويتك الوطنية...",
+    "dateOfBirthPlaceholder":"YYYY-MM-DD",
+    "addressPlaceholder":"أدخل عنوانك...",
+    "cityPlaceholder":"أدخل مدينتك...",
+    "statePlaceholder":"أدخل منطقتك...",
+    "countryPlaceholder":"أدخل بلدك...",
+    "phonePlaceholder":"أدخل رقم هاتفك...",
+    "emailPlaceholder":"أدخل عنوان بريدك الإلكتروني...",
+    "personalInfo": "المعلومات الشخصية",
+    "familyFinancial": "المعلومات العائلية والمالية",
+    "situationDescription": "وصف الوضع",
+    "next": "التالي",
+    "back": "السابق",
+    "submit": "تقديم الطلب",
+    "name": "الاسم الكامل",
+    "nationalId": "رقم الهوية الوطنية",
+    "dateOfBirth": "تاريخ الميلاد",
+    "gender": "الجنس",
+    "genderOptions": {
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "address": "العنوان",
+    "city": "المدينة",
+    "state": "المنطقة",
+    "country": "البلد",
+    "phone": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "maritalStatus": "الحالة الاجتماعية",
+    "maritalStatusOptions": {
+      "single": "أعزب",
+      "married": "متزوج",
+      "divorced": "مطلق",
+      "widowed": "أرمل"
+    },
+    "dependents": "عدد المعالين",
+    "employmentStatus": "الحالة الوظيفية",
+    "employmentStatusOptions": {
+      "employed": "موظف",
+      "unemployed": "عاطل عن العمل",
+      "student": "طالب",
+      "retired": "متقاعد"
+    },
+    "monthlyIncome": "الدخل الشهري (دولار)",
+    "housingStatus": "وضع السكن",
+    "housingStatusOptions": {
+      "owned": "تملك",
+      "rented": "إيجار",
+      "with_family": "مع العائلة",
+      "other": "أخرى"
+    },
+    "financialSituation": "الوضع المالي الحالي",
+    "financialSituationPlaceholder": "صف وضعك المالي الحالي، بما في ذلك الدخل والمصروفات والديون وأي تحديات مالية تواجهها...",
+    "employmentCircumstances": "الظروف الوظيفية",
+    "employmentCircumstancesPlaceholder": "صف وضعك الوظيفي، وتحديات البحث عن عمل، أو الصعوبات في الحفاظ على الوظيفة...",
+    "reasonForApplying": "سبب التقديم",
+    "reasonForApplyingPlaceholder": "اشرح سبب حاجتك للدعم الاجتماعي وكيف سيساعد في تحسين وضعك...",
+    "aiAssist": {
+      "generating": "جاري إنشاء الاقتراح...",
+      "helpMeWrite": "ساعدني في الكتابة",
+      "suggestion": "اقتراح الكتابة بالذكاء الاصطناعي",
+      "accept": "قبول الاقتراح",
+      "discard": "تجاهل",
+      "error": "تعذر إنشاء اقتراح في الوقت الحالي. يرجى المحاولة مرة أخرى لاحقًا.",
+            "available": "مساعد الكتابة بالذكاء الاصطناعي متاح",
+      "description": "انقر على 'ساعدني في الكتابة' في أي حقل للحصول على اقتراحات مدعومة بالذكاء الاصطناعي لتحسين وصفك.",
+      "currentText": "نصك الحالي:",
+      "aiSuggestion": "اقتراح الذكاء الاصطناعي:",
+      "tip": "نصيحة",
+      "tipDescription": "اقتراح الذكاء الاصطناعي هو نقطة بداية. يمكنك تعديله ليعكس وضعك الشخصي بدقة.",
+      "tryAgain": "حاول مرة أخرى",
+      "edit": "عدل أولاً",
+      "prompts": {
+        "financialSituation": "ساعدني في الكتابة عن وضعي المالي الحالي",
+        "employmentCircumstances": "ساعدني في وصف ظروفي الوظيفية",
+        "reasonForApplying": "ساعدني في شرح سبب حاجتي للمساعدة المالية"
+      },
+      "contexts": {
+        "financialSituation": "يحتاج المستخدم إلى وصف الظروف المالية لطلب الدعم الحكومي",
+        "employmentCircumstances": "يحتاج المستخدم إلى وصف الوضع الوظيفي لطلب الدعم الحكومي",
+        "reasonForApplying": "يحتاج المستخدم إلى شرح سبب حاجته للمساعدة المالية"
+      }
+    }
+    }
+  }
