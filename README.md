@@ -41,32 +41,32 @@ text
 
 src/
 ├── components/
-│   ├── UI/                    # Reusable UI components
+│   ├── UI/                    
 │   │   ├── Button.tsx
 │   │   ├── Input.tsx
 │   │   ├── Modal.tsx
 │   │   └── ProgressBar.tsx
-│   └── form/                  # Form-specific components
+│   └── form/                 
 │       ├── Step1PersonalInfo.tsx
 │       ├── Step2FamilyInfo.tsx
 │       ├── Step3SituationDescription.tsx
 │       └── TextAreaWithAI.tsx
-├── store/                     # Redux store configuration
+├── store/                   
 │   ├── store.ts
 │   └── slices/
 │       └── formSlice.ts
-├── services/                  # API and external services
+├── services/                
 │   ├── api.ts
 │   └── openaiService.ts
-├── utils/                     # Utilities and validation
+├── utils/                    
 │   └── validation.ts
-├── hooks/                     # Custom React hooks
+├── hooks/                     
 │   └── useAIAssistant.ts
-├── i18n/                      # Internationalization
+├── i18n/                     
 │   ├── en.json
 │   ├── ar.json
 │   └── i18n.ts
-└── tests/                     # Test files
+└── tests/                   
     └── components/
 
 ## 🚀 Quick Start Guide
@@ -104,13 +104,7 @@ Before you begin, ensure you have the following installed:
     
     # OpenAI Configuration
     VITE_OPENAI_API_KEY=your_openai_api_key_here
-    
-    # API Configuration
-    VITE_API_BASE_URL=http://localhost:3001/api
-    
-    # Application Settings
-    VITE_APP_NAME="Government Social Support Portal"
-    VITE_APP_VERSION=1.0.0
+        
     
 3.  **Start Development Server**
     
