@@ -1,67 +1,132 @@
-// import React from 'react'
-// import { render, screen, fireEvent } from '@testing-library/react'
-// import { Button } from './Button'
-// import { I18nextProvider } from 'react-i18next'
-// import i18n from '../../../i18n/i18n'
+// import React from 'react';
+// import { render, screen, fireEvent } from '@testing-library/react';
+// import { describe, it, expect, vi } from 'vitest';
+// import Button from './Button'; // Adjust import path as needed
+// import { ButtonProps } from '../../../types/componentsTypes';
 
-// const renderWithi18n = (component: React.ReactElement) => {
-//     return render(
-//         <I18nextProvider i18n={i18n}>
-//             {component}
-//         </I18nextProvider>
-//     )
-// }
+// // Mock react-i18next
+// vi.mock('react-i18next', () => ({
+//     useTranslation: () => ({
+//         t: (key: string) => key,
+//     }),
+// }));
 
-// describe('Button', () => {
-//     it('renders with children', () => {
-//         renderWithi18n(<Button>Click me</Button>)
-//         expect(screen.getByText('Click me')).toBeInTheDocument()
-//     })
+// describe('Button Component', () => {
+//     const defaultProps: ButtonProps = {
+//         children: 'Click me',
+//     };
+
+//     it('renders with default props', () => {
+//         render(<Button {...defaultProps} />);
+
+//         const button = screen.getByRole('button', { name: 'Click me' });
+//         expect(button).toBeInTheDocument();
+//         expect(button).toHaveClass('btn btn-primary btn-md');
+//         expect(button).not.toBeDisabled();
+//     });
+
+//     it('renders with correct variant classes', () => {
+//         const { rerender } = render(<Button {...defaultProps} variant="secondary" />);
+
+//         let button = screen.getByRole('button');
+//         expect(button).toHaveClass('btn btn-secondary btn-md');
+
+//         rerender(<Button {...defaultProps} variant="danger" />);
+//         button = screen.getByRole('button');
+//         expect(button).toHaveClass('btn btn-danger btn-md');
+//     });
+
+//     it('renders with correct size classes', () => {
+//         const { rerender } = render(<Button {...defaultProps} size="sm" />);
+
+//         let button = screen.getByRole('button');
+//         expect(button).toHaveClass('btn btn-primary btn-sm');
+
+//         rerender(<Button {...defaultProps} size="lg" />);
+//         button = screen.getByRole('button');
+//         expect(button).toHaveClass('btn btn-primary btn-lg');
+//     });
+
+//     it('renders with additional custom className', () => {
+//         render(<Button {...defaultProps} className="custom-class" />);
+
+//         const button = screen.getByRole('button');
+//         expect(button).toHaveClass('btn btn-primary btn-md custom-class');
+//     });
+
+//     it('handles disabled state', () => {
+//         render(<Button {...defaultProps} disabled />);
+
+//         const button = screen.getByRole('button');
+//         expect(button).toBeDisabled();
+//     });
+
+//     it('shows loading state with spinner and text', () => {
+//         render(<Button {...defaultProps} isLoading />);
+
+//         const button = screen.getByRole('button');
+//         expect(button).toBeDisabled();
+
+//         // Check for loading text
+//         expect(screen.getByText('common.loading')).toBeInTheDocument();
+
+//         // Check for spinner SVG
+//         const spinner = screen.getByRole('button').querySelector('svg');
+//         expect(spinner).toBeInTheDocument();
+//         expect(spinner).toHaveClass('animate-spin');
+//     });
+
+//     it('is disabled when both disabled and isLoading are true', () => {
+//         render(<Button {...defaultProps} disabled isLoading />);
+
+//         const button = screen.getByRole('button');
+//         expect(button).toBeDisabled();
+//     });
 
 //     it('handles click events', () => {
-//         const handleClick = jest.fn()
-//         renderWithi18n(<Button onClick={handleClick}>Click me</Button>)
+//         const handleClick = vi.fn();
+//         render(<Button {...defaultProps} onClick={handleClick} />);
 
-//         fireEvent.click(screen.getByText('Click me'))
-//         expect(handleClick).toHaveBeenCalledTimes(1)
-//     })
+//         const button = screen.getByRole('button');
+//         fireEvent.click(button);
 
-//     it('shows loading state', () => {
-//         renderWithi18n(<Button isLoading>Click me</Button>)
-//         expect(screen.getByText('Loading...')).toBeInTheDocument()
-//     })
+//         expect(handleClick).toHaveBeenCalledTimes(1);
+//     });
 
-//     it('is disabled when loading', () => {
-//         renderWithi18n(<Button isLoading>Click me</Button>)
-//         expect(screen.getByRole('button')).toBeDisabled()
-//     })
+//     it('passes through additional props', () => {
+//         render(
+//             <Button
+//                 {...defaultProps}
+//                 type="submit"
+//                 data-testid="custom-button"
+//                 aria-label="Custom label"
+//             />
+//         );
 
-//     it('is disabled when disabled prop is true', () => {
-//         renderWithi18n(<Button disabled>Click me</Button>)
-//         expect(screen.getByRole('button')).toBeDisabled()
-//     })
+//         const button = screen.getByRole('button');
+//         expect(button).toHaveAttribute('type', 'submit');
+//         expect(button).toHaveAttribute('data-testid', 'custom-button');
+//         expect(button).toHaveAttribute('aria-label', 'Custom label');
+//     });
 
-//     it('applies correct classes for variants', () => {
-//         const { rerender } = renderWithi18n(<Button variant="primary">Primary</Button>)
-//         expect(screen.getByRole('button')).toHaveClass('bg-blue-600')
+//     it('renders children correctly when not loading', () => {
+//         render(
+//             <Button>
+//                 <span>Custom child</span>
+//             </Button>
+//         );
 
-//         rerender(
-//             <I18nextProvider i18n={i18n}>
-//                 <Button variant="secondary">Secondary</Button>
-//             </I18nextProvider>
-//         )
-//         expect(screen.getByRole('button')).toHaveClass('bg-gray-600')
-//     })
+//         expect(screen.getByText('Custom child')).toBeInTheDocument();
+//     });
 
-//     it('applies correct classes for sizes', () => {
-//         const { rerender } = renderWithi18n(<Button size="sm">Small</Button>)
-//         expect(screen.getByRole('button')).toHaveClass('px-3', 'py-1.5')
+//     it('does not render children when loading', () => {
+//         render(
+//             <Button isLoading>
+//                 <span>Custom child</span>
+//             </Button>
+//         );
 
-//         rerender(
-//             <I18nextProvider i18n={i18n}>
-//                 <Button size="lg">Large</Button>
-//             </I18nextProvider>
-//         )
-//         expect(screen.getByRole('button')).toHaveClass('px-6', 'py-3')
-//     })
-// })
+//         expect(screen.queryByText('Custom child')).not.toBeInTheDocument();
+//         expect(screen.getByText('common.loading')).toBeInTheDocument();
+//     });
+// });

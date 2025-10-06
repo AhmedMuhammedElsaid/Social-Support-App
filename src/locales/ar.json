@@ -10,9 +10,10 @@
     "success": "تم بنجاح"
   },
   "form": {
+    "selectOption": "...اختر",
     "namePlaceholder": "أدخل اسمك الكامل",
     "nationallityPlaceholder":"أدخل رقم هويتك الوطنية...",
-    "dateOfBirthPlaceholder":"YYYY-MM-DD",
+    "dateOfBirthPlaceholder":"سنه-شهر-يوم",
     "addressPlaceholder":"أدخل عنوانك...",
     "cityPlaceholder":"أدخل مدينتك...",
     "statePlaceholder":"أدخل منطقتك...",
@@ -94,5 +95,7 @@
         "reasonForApplying": "يحتاج المستخدم إلى شرح سبب حاجته للمساعدة المالية"
       }
     }
-    }
+    },
+    "successMessage":"تم تقديم طلبك بنجاح. سنراجع معلوماتك ونتواصل معك قريبًا.",
+    "submitNewOne":"تقديم طلب جديد"
   }

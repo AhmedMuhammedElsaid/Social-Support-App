@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { SituationDescriptionFormData } from "../utils/validation";
 import { FamilyFinancialInfo, PersonalInfo } from "./formTypes";
 
@@ -15,4 +16,10 @@ export interface AIContext {
     currentText: string;
     prompt?: string;
     context?: string;
+}
+export interface LayoutProps {
+    children: ReactNode;
+    header?: ReactNode;
+    sidebar?: ReactNode;
+    footer?: ReactNode;
 }

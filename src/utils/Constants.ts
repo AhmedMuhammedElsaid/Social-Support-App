@@ -5,33 +5,13 @@ export const URLS = Object.freeze({
 })
 
 export const FORM_LOCAL_STORAGE_KEY = 'socialSupportFormCachedData';
+export const LANG_LOCAL_STORAGE_KEY = 'i18nextLng';
 
-export const initialFormData: ApplicationForm = {
-    personalInfo: {
-        name: '',
-        nationalId: '',
-        dateOfBirth: '',
-        gender: undefined,
-        address: '',
-        city: '',
-        state: '',
-        country: '',
-        phone: '',
-        email: '',
-    },
-    familyFinancialInfo: {
-        maritalStatus: undefined,
-        dependents: 0,
-        employmentStatus: undefined,
-        monthlyIncome: 0,
-        housingStatus: undefined,
-    },
-    situationDescription: {
-        financialSituation: '',
-        employmentCircumstances: '',
-        reasonForApplying: '',
-    },
-}
+export const steps = [
+    'form.personalInfo',
+    'form.familyFinancial',
+    'form.situationDescription',];
+
 
 export const genderOptions = [
     { value: 'male', label: 'form.genderOptions.male' },
@@ -74,3 +54,30 @@ export const aISuggestionFallbacks: { [key: string]: string } = {
     employmentCircumstances: "I have been actively seeking employment opportunities while developing new skills to enhance my job prospects. Current market conditions have created barriers that this support would help me overcome during my transition.",
     reasonForApplying: "This financial assistance would provide crucial support during a challenging transitional period, allowing me to address immediate needs while working towards sustainable independence and stability."
 };
+
+export const initialFormData: ApplicationForm = {
+    personalInfo: {
+        name: '',
+        nationalId: '',
+        dateOfBirth: '',
+        gender: undefined,
+        address: '',
+        city: '',
+        state: '',
+        country: '',
+        phone: '',
+        email: '',
+    },
+    familyFinancialInfo: {
+        maritalStatus: undefined,
+        dependents: 0,
+        employmentStatus: undefined,
+        monthlyIncome: 0,
+        housingStatus: undefined,
+    },
+    situationDescription: {
+        financialSituation: '',
+        employmentCircumstances: '',
+        reasonForApplying: '',
+    },
+}

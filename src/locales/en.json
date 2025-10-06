@@ -10,6 +10,7 @@
     "success": "Success"
   },
   "form": {
+    "selectOption": "Select...",
     "personalInfo": "Personal Information",
     "familyFinancial": "Family & Financial",
     "situationDescription": "Situation Description",
@@ -94,6 +95,7 @@
         "reasonForApplying": "User needs to explain why they need financial assistance"
       }
     }
-    }
-    
+    },
+    "successMessage":"Your application has been submitted successfully. We will review your information and contact you soon.",
+    "submitNewOne":"Submit New Application"
   }

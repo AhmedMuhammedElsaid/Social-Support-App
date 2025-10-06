@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { LANGUAGES } from '../../utils/Constants';
+import { LANG_LOCAL_STORAGE_KEY, LANGUAGES } from '../../utils/Constants';
 import { Select } from '../UI';
 import { setLocalStorageItem } from '../../utils/helpers';
 
@@ -11,7 +11,7 @@ export const LanguageSwitcher: React.FC = () => {
         const lang = e.target.value
         i18n.changeLanguage(lang);
         document.body.dir = i18n.dir(lang);
-        setLocalStorageItem("i18nextLng", lang)
+        setLocalStorageItem(LANG_LOCAL_STORAGE_KEY, lang)
     }, [])
 
     return (

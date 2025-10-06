@@ -10,7 +10,7 @@ import { Step1PersonalInfo } from '../Step1PersonalInfo/Step1PersonalInfo';
 import ProgressBar from '../../ProgressBar/ProgressBar';
 import SuccessMessage from '../../SuccessMessage/SuccessMessage';
 import { getLocalStorageItem } from '../../../utils/helpers';
-import { FORM_LOCAL_STORAGE_KEY } from '../../../utils/Constants';
+import { FORM_LOCAL_STORAGE_KEY, steps } from '../../../utils/Constants';
 
 export const FormWizard: React.FC = () => {
     const { t, i18n } = useTranslation();
@@ -23,11 +23,7 @@ export const FormWizard: React.FC = () => {
         if (cachedForm) dispatch(updateFormWithCachedValues(cachedForm as ApplicationForm));
     }, []);
 
-    const steps = [
-        'form.personalInfo',
-        'form.familyFinancial',
-        'form.situationDescription',
-    ];
+
 
     const handleNext = () => {
         if (currentStep < 3) dispatch(setCurrentStep((currentStep + 1) as FormStep));
