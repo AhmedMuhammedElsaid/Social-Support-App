@@ -10,7 +10,7 @@
     "success": "تم بنجاح"
   },
   "form": {
-    "selectOption": "...اختر",
+    "selectOption": "إختيار ...",
     "namePlaceholder": "أدخل اسمك الكامل",
     "nationallityPlaceholder":"أدخل رقم هويتك الوطنية...",
     "dateOfBirthPlaceholder":"سنه-شهر-يوم",
