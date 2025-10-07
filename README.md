@@ -56,7 +56,7 @@ Before you begin, ensure you have the following installed:
     bash
     
     # Clone the repository
-    git clone [repository-url]
+    git clone [https://github.com/AhmedMuhammedElsaid/Social-Support-App]
     cd government-social-portal
     
     # Install dependencies
@@ -93,11 +93,6 @@ npm run dev              # Start development server
 npm run build            # Create production build
 npm run preview          # Preview production build
 
-# Testing
-npm run test             # Run test suite
-npm run test:watch       # Run tests in watch mode
-npm run test:coverage    # Generate test coverage report
-
 # Code Quality
 npm run lint             # Run ESLint
 npm run type-check       # Run TypeScript compiler check
@@ -113,8 +108,6 @@ npm run build-storybook  # Build Storybook for deployment
 1.  **Start Application**
     
     -   Navigate to the portal homepage
-        
-    -   Click "Start Application" to begin the process
         
 2.  **Step 1: Personal Information**
     
@@ -142,28 +135,8 @@ npm run build-storybook  # Build Storybook for deployment
         
     -   All AI interactions are secure and privacy-focused
         
-5.  **Review and Submit**
-    
-    -   Review all entered information
-        
-    -   Submit the application
-        
-    -   Receive confirmation with next steps
-        
 
 ### For Developers & Administrators
-
-**Running the Test Suite**
-
-bash
-
-npm test
-# Test coverage includes:
-# - Form validation logic
-# - Component rendering
-# - User interactions
-# - AI service integration
-# - Accessibility compliance
 
 **Component Development with Storybook**
 
